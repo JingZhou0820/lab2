@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="lab2.Site" %>
+
+<!DOCTYPE html>
+<!--Jing Zhou-->
+<!--300883146-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title></title>
+    <!--css section-->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/app.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!--Main navigation-->
+        <header role="navigation">
+         
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">My application</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li runat="server" id="home"><a href="default.aspx"><i class="fa fa-home fa-lg" aria-hidden="true"></i> Home</a></li>
+                        <li runat="server" id="about"><a href="About.aspx"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i> About</a></li>
+                        <li runat="server" id="products" ><a href="Products.aspx"><i class="fa fa-product-hunt fa-lg" aria-hidden="true"></i> Products</a></li>
+                        <li runat="server" id="services"><a href="Service.aspx"><i class="fa fa-wpforms fa-lg" aria-hidden="true"></i> Service</a></li>
+                        <li runat="server" id="contact"><a href="Contact.aspx"><i class="fa fa-phone fa-lg" aria-hidden="true"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        </header>
+        <!--main content-->
+        <div role="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+        <!--main footer-->
+        <footer role="contentinfo">
+            <nav class="navbar navbar-inverse navbar-fixed-bottom">
+                <div class="container">
+                    <h4 style="color:gray">&copy 2016  --- learning ASP.NET</h4>
+                </div>
+            </nav>
+
+        </footer>
+        
+    </form>
+
+    <!--javascript section-->
+    <script src="Scripts/jquery-2.2.4.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/app.js"></script>
+</body>
+</html>
